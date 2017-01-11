@@ -1,0 +1,2 @@
+class Tennant < ApplicationRecord
+end

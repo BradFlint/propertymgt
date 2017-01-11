@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Propertymgt</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <div class="homebtns">
+      <div class="dropdown">
+        
+        <ul class="dropdown-menu" aria-labelledby="dLabel">
+          <% if landlord_signed_in? %>
+          <%= link_to "Create New Property", "#{request.base_url}/properties/new", :class => "btn" %>
+          <%= link_to "Sign Out", destroy_landlord_session_path, method: :delete, :class => "btn" %>
+          <%= link_to "All Properties", "#{request.base_url}/properties", :class => "btn" %>
+          <%= link_to "All Tennants", tennants_path, :class => "btn" %>
+          <%= link_to "Create Tennant", "#{request.base_url}/tennants/new", :class => "btn" %>
+          <% elsif session[:tennant_id] %>
+          <%= link_to "Edit Account",  "#{request.base_url}/tennants/#{session[:tennant_id]}/edit", :class => "btn"  %>
+          <%= link_to "Sign Out", sign_out_path, method: :delete, :class => "btn" %>
+          <%= link_to "All Properties", "#{request.base_url}/properties", :class => "btn" %>
+          <%= link_to "Request Maintanence", tennants_maintanence_path, :class => "btn" %>
+		  <%= link_to "Pay Rent", tennants_pay_path, :class => "btn" %>
+          <% else %>  
+          <%= link_to "Homes for Rent", "#{request.base_url}/properties", :class => "btn" %>
+          <%= link_to "Apply", "#{request.base_url}/properties/apply", :class => "btn" %> |
+          <%= link_to "Contact", "#{request.base_url}/landlords/contact", :class => "btn" %>
+          <%= link_to "Landlord Login", "#{request.base_url}/landlords/sign_in", :class => "btn" %>
+          <%= link_to "Tennant Login", sessions_path, :class => "btn" %>
+          <%= link_to "All Properties", "#{request.base_url}/properties", :class => "btn" %>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+
+  <body>
+  	<p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    <%= yield %>
+  </body>
+</html>
