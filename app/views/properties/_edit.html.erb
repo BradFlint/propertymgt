@@ -1,5 +1,6 @@
 <div class="editproperty">
-	<%= form_for @property, html: {method: :put} do |f| %>
+
+	<%= form_for @property, :html => {:multipart => true} do |f| %>
 
 	   <div class="field">
 	     <%= f.label :address, "Street Address" %><br />
@@ -66,9 +67,13 @@
 	     <%= f.text_field :application_fee %>
 	   </div>
 
+	   <%= f.file_field :avatar %>
+	   
 	   <div class="actions">
 	    <%= f.submit "Submit Changes" %>
 	  </div>
 
-	<% end %>
+	 <% end %>
 </div>
+
+

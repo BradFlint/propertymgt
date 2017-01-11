@@ -28,17 +28,15 @@ class PropertiesController < ApplicationController
    end
 
    def destroy
-	    @property = Property.find(params[:id])
-    	@property.destroy
-
-	    redirect_to properties_home_path
+	    Property.find(params[:id]).destroy
+	    redirect_to properties_path
 	end
 
 	def update
 	    @property = Property.find(params[:id])
 
 	      if @property.update(property_params)
-          redirect_to properties_home_path
+          redirect_to properties_path
         else
 	        render 'edit'
 	    end
@@ -46,7 +44,7 @@ class PropertiesController < ApplicationController
 
     private
 	def property_params
-	    params.require(:property).permit(:property_id, :address, :city, :state, :zip, :monthly_rent, :date_available, :bedrooms, :baths, :square_feet, :description, :pet_policy, :security_deposit, :application_fee)
+	    params.require(:property).permit(:property_id, :address, :city, :state, :zip, :monthly_rent, :date_available, :bedrooms, :baths, :square_feet, :description, :pet_policy, :security_deposit, :application_fee, :avatar)
 	end
 end
 

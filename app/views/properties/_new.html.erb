@@ -1,4 +1,5 @@
-<%= form_for (@property) do |f| %>
+
+<%= form_for @property, :url => properties_path, :html => { :multipart => true } do |f| %>
 
    <div class="field">
      <%= f.label :address, "Street Address" %><br />
@@ -65,9 +66,13 @@
      <%= f.text_field :application_fee %>
    </div>
 
+ 	<%= f.file_field :avatar %>
+ 	
    <div class="actions">
     <%= f.submit "Create Property" %>
   </div>
+
+ 
 
 <% end %>
 

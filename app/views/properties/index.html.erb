@@ -2,6 +2,7 @@
 <H1>Homes for rent</H1>
 
 <% @properties.each do |property| %>
+	<%= image_tag property.avatar.url(:thumb) %>
 	<%= property.address%>
 	<%= property.city%>
 	<%= property.state%>
@@ -16,4 +17,6 @@
 	<%= property.security_deposit%>
 	<%= property.application_fee%>
 	<%= link_to "Edit Property", edit_property_path(property), :class => "btn" %>
+	<%= link_to "Delete Property", property_path(property), method: :delete, :class => "btn"  %>
+	<br>
 <%end%>
