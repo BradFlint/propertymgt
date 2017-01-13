@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170112231512) do
+ActiveRecord::Schema.define(version: 20170113210713) do
 
   create_table "landlords", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -59,8 +59,9 @@ ActiveRecord::Schema.define(version: 20170112231512) do
     t.string   "last_name"
     t.string   "email"
     t.string   "password"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "property_id"
   end
 
   create_table "views", force: :cascade do |t|
