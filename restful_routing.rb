@@ -20,7 +20,7 @@ cancel_landlord_registration GET    /landlords/cancel(.:format)          landlor
                     sessions GET    /sessions/sign_in(.:format)          sessions#new
                     sign_out DELETE /sessions/sign_out(.:format)         sessions#destroy
         tennants_maintanence GET    /tennants/maintanence(.:format)      tennants#maintanence
-                tennants_pay GET    /tennants/pay(.:format)              tennants#pay
+                tennants_pay GET    /tennants/:id/pay(.:format)          tennants#pay
                              POST   /properties/apply(.:format)          properties#apply
                              POST   /tennants/maintanence(.:format)      tennants#maintanence
               properties_all GET    /properties/all(.:format)            properties#all

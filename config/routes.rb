@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   get '/sessions/sign_in' => 'sessions#new', as: 'sessions'
   delete '/sessions/sign_out' => 'sessions#destroy', as: 'sign_out'
   get '/tennants/maintanence' => 'tennants#maintanence', as: 'tennants_maintanence'
-  get '/tennants/pay' => 'tennants#pay', as: 'tennants_pay'
+  get '/tennants/:id/pay' => 'tennants#pay', as: 'tennants_pay'
   post '/properties/apply' => 'properties#apply'
   post '/tennants/maintanence' => 'tennants#maintanence'
   get '/properties/all' => 'properties#all', as: 'properties_all'

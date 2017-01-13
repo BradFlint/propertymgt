@@ -5,6 +5,7 @@ class TennantsController < ApplicationController
 
   def new
   	@tennant = Tennant.new
+  	@property_id = params[:tennant][:property_id]
   end
 
   def create
@@ -37,11 +38,11 @@ class TennantsController < ApplicationController
 
 
   def pay
-
+  	@tennant = Tennant.find(params[:id])
   end
 
   private
   def tennant_params
-    params.require(:tennant).permit(:first_name, :last_name, :email, :password )
+    params.require(:tennant).permit(:first_name, :last_name, :email, :password, :property_id )
   end
 end
