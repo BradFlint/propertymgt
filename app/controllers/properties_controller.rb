@@ -1,6 +1,15 @@
 class PropertiesController < ApplicationController
 	def index
+		@properties = Property.listed
+	end 
+
+	def all
 		@properties = Property.all
+	end
+
+	def liststatus
+		@property = Property.find(params[:id]).statusChange
+		redirect_to properties_all_path
 	end 
 
 	def new
@@ -21,6 +30,10 @@ class PropertiesController < ApplicationController
     else
       render "new"
     end
+   end
+
+   def apply
+   	Pony.mail(from: params[:email], to: "bradwflint@gmail.com", subject: "Email application", body: "application test", :attachments => {"rentalapp.pdf" => File.read(Rails.root.to_s + "/public/rentalapp.pdf")} )
    end
 
    def edit

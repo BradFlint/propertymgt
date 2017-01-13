@@ -1,6 +1,4 @@
-
-<H1>Homes for rent</H1>
-
+<h1>All properties here</h1>
 <% @properties.each do |property| %>
 	<%= image_tag property.avatar.url(:thumb) %>
 	<%= property.address%>
@@ -16,6 +14,12 @@
 	<%= property.pet_policy%>
 	<%= property.security_deposit%>
 	<%= property.application_fee%>
-	
+	<%= link_to "Edit Property", edit_property_path(property), :class => "btn" %>
+	<%= link_to "Delete Property", property_path(property), method: :delete, :class => "btn"  %>
+	<% if property.listed %>
+	<%= link_to "Unlist Property", properties_liststatus_path(property), :class => "btn" %>
+	<% else %>
+	<%= link_to "List Property", properties_liststatus_path(property), :class => "btn" %>
+	<% end %>
 	<br>
 <%end%>

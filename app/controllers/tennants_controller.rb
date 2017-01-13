@@ -32,7 +32,7 @@ class TennantsController < ApplicationController
   end
 
   def maintanence
-
+  	Pony.mail(from: params[:email], to: "bradwflint@gmail.com", subject: "Maintanence request", body: "maintanence test" )
   end
 
 

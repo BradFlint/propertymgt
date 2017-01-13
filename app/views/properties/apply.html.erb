@@ -1,9 +1,9 @@
-<h1>tennants request maintanence</h1>
+<h1>apply here<h1>
 
-<h3>Enter your name and description of the maintanence issue</h3>
+<h3>Enter your name and email to have the application emailed to you</h3>
 
 <div id="applicationForm">
-	<%= form_tag '/tennants/maintanence' do %>
+	<%= form_tag '/properties/apply' do %>
 
   <div class="field">
     <%= label_tag :name, "Name" %><br />
@@ -11,8 +11,8 @@
   </div>
   
   <div class="field">
-    <%= label_tag :message, "Message" %><br />
-    <%= text_field_tag :message %>
+    <%= label_tag :email, "Email" %><br />
+    <%= text_field_tag :email %>
   </div>
   
   <div class="actions">
@@ -21,5 +21,3 @@
 
   <% end %>
 </div>
-
-
