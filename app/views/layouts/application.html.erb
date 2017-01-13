@@ -15,12 +15,12 @@
           <%= link_to "All Properties", "#{request.base_url}/properties/all", :class => "btn" %> |
           <%= link_to "Create New Property", "#{request.base_url}/properties/new", :class => "btn" %> |
           <%= link_to "All Tennants", tennants_path, :class => "btn" %> |
-          <%= link_to "Create Tennant", "#{request.base_url}/tennants/new", :class => "btn" %> |
+          <%= link_to "Create New Tennant", "#{request.base_url}/tennants/new", :class => "btn" %> |
           <%= link_to "Sign Out", destroy_landlord_session_path, method: :delete, :class => "btn" %>
           <% elsif session[:tennant_id] %>
           <%= link_to "Edit Account",  "#{request.base_url}/tennants/#{session[:tennant_id]}/edit", :class => "btn"  %> |
-          <%= link_to "All Properties", "#{request.base_url}/properties", :class => "btn" %>
-          <%= link_to "Request Maintanence", tennants_maintanence_path, :class => "btn" %>
+          <%= link_to "Homes For Rent", "#{request.base_url}/properties", :class => "btn" %> |
+          <%= link_to "Request Maintanence", tennants_maintanence_path, :class => "btn" %> |
 		  <%= link_to "Pay Rent", tennants_pay_path, :class => "btn" %> |
 		  <%= link_to "Sign Out", sign_out_path, method: :delete, :class => "btn" %>
           <% else %>  
