@@ -9,8 +9,7 @@
   </head>
   <div class="homebtns">
       <div class="dropdown">
-        
-        <ul class="dropdown-menu" aria-labelledby="dLabel">
+        <ul class="signinmenu" aria-labelledby="dLabel">
           <% if landlord_signed_in? %>
           <%= link_to "All Properties", "#{request.base_url}/properties/all", :class => "btn" %> |
           <%= link_to "Create New Property", "#{request.base_url}/properties/new", :class => "btn" %> |

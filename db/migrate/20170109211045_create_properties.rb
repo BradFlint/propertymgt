@@ -14,6 +14,7 @@ class CreateProperties < ActiveRecord::Migration[5.0]
       t.string :security_deposit
       t.string :application_fee
       t.string :description
+      t.boolean :listed
 
       t.timestamps
     end

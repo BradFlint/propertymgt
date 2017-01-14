@@ -50,9 +50,9 @@ class PropertiesController < ApplicationController
 
 	      if @property.update(property_params)
           redirect_to properties_path
-        else
-	        render 'edit'
-	    end
+	      else
+		      render 'edit'
+		  end
 	end
 
     private
