@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170113233053) do
+ActiveRecord::Schema.define(version: 20170114002557) do
 
   create_table "landlords", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -51,7 +51,7 @@ ActiveRecord::Schema.define(version: 20170113233053) do
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
     t.boolean  "listed"
-    t.decimal  "monthly_rent"
+    t.integer  "monthly_rent"
   end
 
   create_table "tennants", force: :cascade do |t|
