@@ -13,3 +13,231 @@
  *= require_tree .
  *= require_self
  */
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+
+body{
+ 	background: url(greencraftsman.jpg);
+ 	background-size: cover;
+ 	background-repeat: no-repeat;
+ 	font-family: Raleway;
+ }
+
+header{
+	width: 105%;
+ 	height: 120px;
+ 	background-color: #9E9C9C;
+ 	color: white;
+    opacity: .95;
+    box-shadow: 0 15px 6px -9px #333;
+    margin-left: -2%;
+    margin-top: .3%;
+}
+
+.logo img{
+	width:50px;
+	height: 40px;
+}
+
+.homebtns{
+	display: inline;
+	float: left;
+	margin-left: 0%;
+	margin-top: 1%;
+}
+
+.footer {
+	width: 105%;
+	height: 125px;
+	background-color: black;
+	color: #DADADA;
+	margin: 0;
+	float: left;
+	text-align: center;
+	padding: 20px 0;
+	position: absolute; 
+	top: 950px;
+	margin-left: -2%;
+}
+
+.footer p{
+	margin-top: 100px;
+}
+
+.homes_for_rent{
+	height: auto;
+	width: 1200px;
+	background: white;
+	padding: 1px 5px 30px 0px;
+}
+
+#application_form{
+	height: 250px;
+	width: 700px;
+	background: white;
+	margin-left: 350px;
+	margin-top: 100px;
+	box-shadow: 0 15px 6px -9px #333;
+	padding: 1px 5px 30px 0px;
+}
+
+#tennant_login_form{
+	height: auto;
+	width: 750px;
+	background: white;
+	margin-left: 350px;
+	margin-top:50px;
+	box-shadow: 0 15px 6px -9px #333;
+	padding: 1px 5px 30px 0px;
+}
+
+.contact_info{
+	height: 250px;
+	width: 700px;
+	background: white;
+	margin-left: 350px;
+	margin-top:100px;
+	box-shadow: 0 15px 6px -9px #333;
+}
+
+.contact_info h1{
+	font-size: 30px;
+}
+
+#homes_for_rent{
+	height: auto;
+	width: 700px;
+	background: white;
+	margin-left: 350px;
+	margin-top:100px;
+	box-shadow: 0 15px 6px -9px #333;
+	padding: 1px 5px 30px 0px;
+}
+
+#all_properties{
+	height: auto;
+	width: 700px;
+	background: white;
+	margin-left: 350px;
+	margin-top: 70px;
+	box-shadow: 0 15px 6px -9px #333;
+	padding: 1px 5px 30px 0px;
+}
+
+#create_new_property{
+	height: auto;
+	width: 450px;
+	background: white;
+	margin-left: 450px;
+	margin-top:50px;
+	box-shadow: 0 15px 6px -9px #333;
+	padding: 1px 5px 30px 0px;
+}
+
+#all_tennants{
+	height: auto;
+	width: 750px;
+	background: white;
+	margin-left: 350px;
+	margin-top:50px;
+	box-shadow: 0 15px 6px -9px #333;
+	padding: 1px 5px 30px 0px;
+}
+
+#tennant_edit{
+	height: auto;
+	width: 750px;
+	background: white;
+	margin-left: 350px;
+	margin-top:50px;
+	box-shadow: 0 15px 6px -9px #333;
+	padding: 1px 5px 30px 0px;
+}
+
+#tennant_maintanence{
+	height: auto;
+	width: 750px;
+	background: white;
+	margin-left: 350px;
+	margin-top:50px;
+	box-shadow: 0 15px 6px -9px #333;
+	padding: 1px 5px 30px 0px;
+}
+
+#tennant_pay{
+	height: auto;
+	width: 750px;
+	background: white;
+	margin-left: 350px;
+	margin-top:50px;
+	box-shadow: 0 15px 6px -9px #333;
+	padding: 1px 5px 30px 0px;
+}
+
+#create_new_tennant{
+	height: auto;
+	width: 750px;
+	background: white;
+	margin-left: 350px;
+	margin-top:50px;
+	box-shadow: 0 15px 6px -9px #333;
+	padding: 1px 5px 30px 0px;
+}
+
+#edit_property{
+	height: auto;
+	width: 450px;
+	background: white;
+	margin-left: 450px;
+	margin-top:50px;
+	box-shadow: 0 15px 6px -9px #333;
+	padding: 1px 5px 30px 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

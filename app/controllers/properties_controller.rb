@@ -26,7 +26,7 @@ class PropertiesController < ApplicationController
 	def create
     @property = Property.new(property_params)
     if @property.save
-        redirect_to root_path
+        redirect_to properties_all_path
     else
       render "new"
     end
@@ -42,7 +42,7 @@ class PropertiesController < ApplicationController
 
    def destroy
 	    Property.find(params[:id]).destroy
-	    redirect_to properties_path
+	    redirect_to properties_all_path
 	end
 
 	def update

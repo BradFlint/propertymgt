@@ -1,21 +1,24 @@
 
-<H1>Homes for rent</H1>
-
-<% @properties.each do |property| %>
-	<%= image_tag property.avatar.url(:thumb) %>
-	<%= property.address%>
-	<%= property.city%>
-	<%= property.state%>
-	<%= property.zip%>
-	<%= property.monthly_rent%>
-	<%= property.date_available%>
-	<%= property.bedrooms%>
-	<%= property.bathrooms%>
-	<%= property.square_feet%>
-	<%= property.description%>
-	<%= property.pet_policy%>
-	<%= property.security_deposit%>
-	<%= property.application_fee%>
-	
-	<br>
-<%end%>
+<div align= center id="homes_for_rent">
+	<div align=center id="rent">
+		<h1>Homes for Rent</h1>
+	</div>
+	<% @properties.each do |property| %>
+		<%= image_tag property.avatar.url(:thumb) %>
+		<%= property.address%>
+		<%= property.city%>
+		<%= property.state%>
+		<%= property.zip%>
+		<%= property.monthly_rent%>
+		<%= property.date_available%>
+		<%= property.bedrooms%>
+		<%= property.bathrooms%>
+		<%= property.square_feet%>
+		<%= property.description%>
+		<%= property.pet_policy%>
+		<%= property.security_deposit%>
+		<%= property.application_fee%>
+		
+		<br>
+	<%end%>
+</div>

@@ -1,25 +1,29 @@
-<h1>tennants request maintanence</h1>
-
-<h3>Enter your name and description of the maintanence issue</h3>
-
-<div id="applicationForm">
-	<%= form_tag '/tennants/maintanence' do %>
-
-  <div class="field">
-    <%= label_tag :name, "Name" %><br />
-    <%= text_field_tag :name %>
-  </div>
-  
-  <div class="field">
-    <%= label_tag :message, "Message" %><br />
-    <%= text_field_tag :message %>
-  </div>
-  
-  <div class="actions">
-    <%= submit_tag  "Send" %>
+<div align= center id="tennant_maintanence">
+  <div align="center" id="maint_form">
+    <h1>Do you have a maintanence issue?</h1>
   </div>
 
-  <% end %>
+  <h3>Enter your name and the description of the problem.</h3>
+  <h3>An email will be automatically sent to the landlord.</h3> 
+
+  <div id="maintanence_form">
+  	<%= form_tag '/tennants/maintanence' do %>
+
+    <div class="field">
+      <%= label_tag :name, "Name" %><br />
+      <%= text_field_tag :name %>
+    </div>
+    
+    <div class="field">
+      <%= label_tag :message, "Message" %><br />
+      <%= text_field_tag :message %>
+    </div>
+    
+    <div class="actions">
+      <%= submit_tag  "Send" %>
+    </div>
+
+    <% end %>
+  </div>
 </div>
-
 

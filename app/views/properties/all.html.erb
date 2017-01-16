@@ -1,27 +1,30 @@
-<h1>All properties here</h1>
-
-<% @properties.each do |property| %>
-	<%= image_tag property.avatar.url(:thumb) %>
-	<%= property.address%>
-	<%= property.city%>
-	<%= property.state%>
-	<%= property.zip%>
-	<%= property.monthly_rent%>
-	<%= property.date_available%>
-	<%= property.bedrooms%>
-	<%= property.bathrooms%>
-	<%= property.square_feet%>
-	<%= property.description%>
-	<%= property.pet_policy%>
-	<%= property.security_deposit%>
-	<%= property.application_fee%>
-	<%= link_to "Add Tennant to Property", new_tennant_path(:tennant => {:property_id =>property.id}), :class => "btn" %> |
-	<%= link_to "Edit Property", edit_property_path(property), :class => "btn" %>
-	<%= link_to "Delete Property", property_path(property), method: :delete, :class => "btn"  %>
-	<% if property.listed %>
-	<%= link_to "Unlist Property", properties_liststatus_path(property), :class => "btn" %>
-	<% else %>
-	<%= link_to "List Property", properties_liststatus_path(property), :class => "btn" %>
-	<% end %> 
-	<br>
-<%end%>
+<div align= center id="all_properties">
+	<div align=center id="properties_label">
+		<h1>All Properties</h1>
+	</div>
+	<% @properties.each do |property| %>
+		<%= image_tag property.avatar.url(:thumb) %>
+		<%= property.address%>
+		<%= property.city%>
+		<%= property.state%>
+		<%= property.zip%>
+		<%= property.monthly_rent%>
+		<%= property.date_available%>
+		<%= property.bedrooms%>
+		<%= property.bathrooms%>
+		<%= property.square_feet%>
+		<%= property.description%>
+		<%= property.pet_policy%>
+		<%= property.security_deposit%>
+		<%= property.application_fee%>
+		<%= link_to "Add Tennant to Property", new_tennant_path(:tennant => {:property_id =>property.id}), :class => "btn" %> |
+		<%= link_to "Edit Property", edit_property_path(property), :class => "btn" %>
+		<%= link_to "Delete Property", property_path(property), method: :delete, :class => "btn"  %>
+		<% if property.listed %>
+		<%= link_to "Unlist Property", properties_liststatus_path(property), :class => "btn" %>
+		<% else %>
+		<%= link_to "List Property", properties_liststatus_path(property), :class => "btn" %>
+		<% end %> 
+		<br>
+	<%end%>
+</div>

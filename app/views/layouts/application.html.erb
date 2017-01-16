@@ -7,34 +7,44 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-  <div class="homebtns">
-      <div class="dropdown">
-        <ul class="signinmenu" aria-labelledby="dLabel">
-          <% if landlord_signed_in? %>
-          <%= link_to "All Properties", "#{request.base_url}/properties/all", :class => "btn" %> |
-          <%= link_to "Create New Property", "#{request.base_url}/properties/new", :class => "btn" %> |
-          <%= link_to "All Tennants", tennants_path, :class => "btn" %> |
-          <%= link_to "Sign Out", destroy_landlord_session_path, method: :delete, :class => "btn" %>
-          <% elsif session[:tennant_id] %>
-          <%= link_to "Edit Account",  "#{request.base_url}/tennants/#{session[:tennant_id]}/edit", :class => "btn"  %> |
-          <%= link_to "Homes For Rent", "#{request.base_url}/properties", :class => "btn" %> |
-          <%= link_to "Request Maintanence", tennants_maintanence_path, :class => "btn" %> |
-		  <%= link_to "Pay Rent", "#{request.base_url}/tennants/#{session[:tennant_id]}/pay", :class => "btn" %> |
-		  <%= link_to "Sign Out", sign_out_path, method: :delete, :class => "btn" %>
-          <% else %>  
-          <%= link_to "Homes for Rent", "#{request.base_url}/properties", :class => "btn" %> |
-          <%= link_to "Apply", "#{request.base_url}/properties/apply", :class => "btn" %> |
-          <%= link_to "Contact", "#{request.base_url}/landlords/contact", :class => "btn" %> |
-          <%= link_to "Landlord Login", "#{request.base_url}/landlords/sign_in", :class => "btn" %> |
-          <%= link_to "Tennant Login", sessions_path, :class => "btn" %>
-          <% end %>
-        </ul>
-      </div>
-    </div>
-
+  
   <body>
+  	<header>
+	  <div class="homebtns">
+	      <div class="dropdown">
+	        <ul class="signinmenu" aria-labelledby="dLabel">
+	          <% if landlord_signed_in? %>
+	          <%= link_to "All Properties", "#{request.base_url}/properties/all", :class => "btn" %> |
+	          <%= link_to "Create New Property", "#{request.base_url}/properties/new", :class => "btn" %> |
+	          <%= link_to "All Tennants", tennants_path, :class => "btn" %> |
+	          <%= link_to "Sign Out", destroy_landlord_session_path, method: :delete, :class => "btn" %>
+	          <% elsif session[:tennant_id] %>
+	          <%= link_to "Edit Account",  "#{request.base_url}/tennants/#{session[:tennant_id]}/edit", :class => "btn"  %> |
+	          <%= link_to "Homes For Rent", "#{request.base_url}/properties", :class => "btn" %> |
+	          <%= link_to "Request Maintanence", tennants_maintanence_path, :class => "btn" %> |
+			  <%= link_to "Pay Rent", "#{request.base_url}/tennants/#{session[:tennant_id]}/pay", :class => "btn" %> |
+			  <%= link_to "Sign Out", sign_out_path, method: :delete, :class => "btn" %>
+	          <% else %>  
+	          <%= link_to "Homes for Rent", "#{request.base_url}/properties", :class => "btn" %> 
+	          <%= link_to "Apply", "#{request.base_url}/properties/apply", :class => "btn" %> |
+	          <%= link_to "Contact Us", "#{request.base_url}/landlords/contact", :class => "btn" %> |
+	          <%= link_to "Landlord Login", "#{request.base_url}/landlords/sign_in", :class => "btn" %> |
+	          <%= link_to "Tennant Login", sessions_path, :class => "btn" %>
+	          <% end %>
+	        </ul>
+	      </div>
+	   </div>
+
+	   <div class="logo">
+			<img src="<%= request.base_url%>/images/logo.jpg">
+	   </div>
+
+	</header>
   	<p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= yield %>
-  </body>
+    <div class="footer">
+		<p>&copy 2017 Evolution Property Management Inc 2281 West Temple, Suite 300 
+		Salt Lake City, Utah 84121</p>
+	</div>
 </html>
