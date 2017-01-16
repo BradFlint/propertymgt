@@ -1,22 +1,17 @@
 <div align= center id="application_form">
   <div align=center id="application_label">
-    <h1>Enter your name and email address to have the application sent you</h1>
+    <h1>Application</h1>
+    <h3>Enter your name and email address to have the application form emailed to you</h3>
   </div>
 	<%= form_tag '/properties/apply' do %>
 
   <div class="field">
-    <%= label_tag :name, "Name" %><br />
+    <%= label_tag :name, "Name" %>
     <%= text_field_tag :name %>
-  </div>
-  
-  <div class="field">
-    <%= label_tag :email, "Email" %><br />
+    <%= label_tag :email, "Email" %>
     <%= text_field_tag :email %>
-  </div>
-  
-  <div class="actions">
     <%= submit_tag "Send" %>
   </div>
-
+  
   <% end %>
 </div>
