@@ -3,6 +3,8 @@
 	<div align=center id="login_greet">
 		<h1>Welcome Back! Sign in here</h1>
 	</div>
+	<br>
+	<br>
 	<%= form_tag(sessions_create_path, method: "post") do %>
 		<%= label_tag(:email, "Email Address")%>
 		<%= text_field_tag(:email)%>

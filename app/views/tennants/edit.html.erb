@@ -1,7 +1,8 @@
 <div align= center id="tennant_edit">
-	<div align="center" id="editgreet">
-		<h1>Need to edit your account information?</h1>
+	<div align="center" id="edit_account">
+		<h1>Edit Account</h1>
 	</div>
+		<h2>Need to edit your account information?</h2>
 	<!-- displays current users information and give the user the ability to change the info -->
 		<%= form_for @tennant, html: {method: :put} do |f| %>
 			<%= f.label :first_name, "First Name"%>

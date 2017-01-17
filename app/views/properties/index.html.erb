@@ -2,6 +2,7 @@
 <div align= center id="homes_for_rent">
 	<div align=center id="rent">
 		<h1>Homes for Rent</h1>
+		<hr>
 	</div>
 	<% @properties.each do |property| %>
 		<%= image_tag property.avatar.url(:thumb) %>
@@ -19,6 +20,6 @@
 		<%= property.security_deposit%>
 		<%= property.application_fee%>
 		
-		<br>
+		<hr>
 	<%end%>
 </div>
