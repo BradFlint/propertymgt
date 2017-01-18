@@ -1,4 +1,7 @@
 class PropertiesController < ApplicationController
+	
+	before_action :authenticate_landlord!, only: [:all, :liststatus, :new, :create, :edit, :destroy, :update ]
+
 	def index
 		@properties = Property.listed
 	end 

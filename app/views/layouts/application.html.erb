@@ -7,7 +7,8 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-  
+
+  <% current_tennant = Tennant.find(session[:tennant_id]) if session[:tennant_id] %>
   <body>
   	<header>
 	  <div class="home_btns">
@@ -18,22 +19,20 @@
 		          <%= link_to "All Tennants", tennants_path, :class => "btn" %> |
 		          <%= link_to "Sign Out", destroy_landlord_session_path, method: :delete, :class => "btn" %>
 	          <% elsif session[:tennant_id] %>
-		          <%= link_to "Edit Account", edit_tennant_path(tennant).find(session[:tennant_id], :class => "btn"  %> |
+		          <%= link_to "Edit Account", edit_tennant_path(current_tennant), :class => "btn"  %> |
 		          <%= link_to "Homes For Rent", properties_path, :class => "btn" %> |
 		          <%= link_to "Request Maintanence", tennants_maintanence_path, :class => "btn" %> |
-				  <%= link_to "Pay Rent", tennants_pay_path, :class => "btn" %> |
+				  <%= link_to "Pay Rent", tennants_pay_path(current_tennant), :class => "btn" %> |
 				  <%= link_to "Sign Out", sign_out_path, method: :delete, :class => "btn" %>
 	          <% else %>  
+		          <%= link_to "Home", root_path, :class => 'btn' %> |
 		          <%= link_to "Homes for Rent", properties_path, :class => "btn" %> |
 		          <%= link_to "Apply", properties_apply_path, :class => "btn" %> |
 		          <%= link_to "Contact Us", landlords_contact_path, :class => "btn" %> |
-				  <%= link_to "Home", root_path, :class => 'btn' %>
-
-		          <span class= "landlord_login">
-			          <%= link_to "Landlord Login", landlord_session_path, :class => "btn" %> |
-			          <%= link_to "Tennant Login", sessions_path, :class => "btn" %>
-			      </span>
-
+				  
+			      <%= link_to "Landlord Login", landlord_session_path, :class => "btn" %> |
+			      <%= link_to "Tennant Login", sessions_path, :class => "btn" %>
+			  
 		      <% end %>  
 	      
 	  </div>
