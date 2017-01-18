@@ -4,20 +4,22 @@
 	</div>
 		<h2>Need to edit your account information?</h2>
 	<!-- displays current users information and give the user the ability to change the info -->
-		<%= form_for @tennant, html: {method: :put} do |f| %>
-			<%= f.label :first_name, "First Name"%>
-			<%= f.text_field :first_name%>
-			<br>
-			<%= f.label :last_name, "Last Name"%>
-			<%= f.text_field :last_name %>
-			<br>
-			<%= f.label :email, "Email"%>
-			<%= f.text_field :email %>
-			<br>
-			<%= f.label :password, "Password"%>
-			<%= f.text_field :password %>
-			<br>
-			<br>
-			<%= f.submit%>
-		<% end %>
+		<div id="form_edit"
+			<%= form_for @tennant, html: {method: :put} do |f| %>
+				<%= f.label :first_name, "First Name" %>
+				<%= f.text_field :first_name %>
+				<br>
+				<%= f.label :last_name, "Last Name" %>
+				<%= f.text_field :last_name %>
+				<br>
+				<%= f.label :email, "Email" %>
+				<%= f.text_field :email %>
+				<br>
+				<%= f.label :password, "Password" %>
+				<%= f.text_field :password %>
+				<br>
+				<br>
+				<%= f.submit %>
+			<% end %>
+		</div>
 </div>

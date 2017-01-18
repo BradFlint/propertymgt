@@ -50,7 +50,7 @@ header{
     float: right;
     position: relative;
     top: -200px;
-    right: 60px;
+    right: 45px;
     height: auto;
 }
 
@@ -74,6 +74,10 @@ header{
 	font-size: 22px;
 }
 
+.btn:hover{
+	color: #2daf54;
+}
+
 .home_btns{
 	float: left;
     margin-left: 25%;
@@ -90,7 +94,7 @@ header{
 
 .footer {
 	width: 101.5%;
-	height: 125px;
+	height: 70px;
 	background-color: black;
 	color: #DADADA;
 	margin: 0;
@@ -103,7 +107,7 @@ header{
 }
 
 .footer p{
-	margin-top: 100px;
+	margin-top: 50px;
 }
 
 #application_form{
@@ -118,7 +122,7 @@ header{
 }
 
 #apply_text, #applytext input {
-	margin-left: 10px;
+	margin-left: 20px;
 }
 
 #apply{
@@ -141,7 +145,7 @@ header{
 	margin-left: 350px;
 	margin-top:75px;
 	box-shadow: 0 20px 6px -9px #333;
-	padding: 1px 15px 50px 15px;
+	padding: 3px 0px 50px 0px;
 	border-style: solid;
 }
 
@@ -149,7 +153,7 @@ header{
 	height: 65px;
 	width: auto;
 	background-color: black;
-	color: white;
+	color: #D8D8D8;
 }
 
 #login_greet h1{
@@ -185,10 +189,10 @@ header{
 }
 
 #homes_for_rent{
-	height: 470px;
-	width: 700px;
+	height: 500px;
+	width: 400px;
 	background: white;
-	margin-left: 350px;
+	margin-left: 40px;
 	margin-top:75px;
 	box-shadow: 0 20px 6px -9px #333;
 	padding: 7px 0px 30px 0px;
@@ -200,7 +204,6 @@ header{
 	height: 65px;
 	width: auto;
 	background-color: black;
-	color: white;
 }
 
 #rent h1{
@@ -209,15 +212,39 @@ header{
 	color: #D8D8D8;
 }
 
+#home_preview{
+	height: 600px;
+	width: 900px;
+	background: white;
+	margin-left: 480px;
+	margin-top:-595px;
+	box-shadow: 0 20px 6px -9px #333;
+	padding: 7px 0px 30px 0px;
+	border-style: solid;
+}
+
 #all_properties{
-	height: auto;
+	height: 470px;
 	width: 700px;
 	background: white;
 	margin-left: 350px;
 	margin-top: 75px;
 	box-shadow: 0 20px 6px -9px #333;
-	padding: 1px 5px 30px 0px;
+	padding: 7px 0px 30px 0px;
 	border-style: solid;
+	overflow: scroll;
+}
+
+#properties_label{
+	height: 65px;
+	width: auto;
+	background-color: black;
+}
+
+#properties_label h1{
+	margin-top: 0px;
+	padding-top: 12px;
+	color: #D8D8D8;
 }
 
 #create_new_property{
@@ -227,8 +254,20 @@ header{
 	margin-left: 450px;
 	margin-top:75px;
 	box-shadow: 0 20px 6px -9px #333;
-	padding: 1px 5px 30px 0px;
+	padding: 7px 0px 30px 0px;
 	border-style: solid;
+}
+
+#properties_new{
+	height: 65px;
+	width: auto;
+	background-color: black;
+}
+
+#properties_new h1{
+	margin-top: 0px;
+	padding-top: 12px;
+	color: #D8D8D8;
 }
 
 #all_tennants{
@@ -238,8 +277,20 @@ header{
 	margin-left: 350px;
 	margin-top:75px;
 	box-shadow: 0 20px 6px -9px #333;
-	padding: 1px 5px 30px 0px;
+	padding: 7px 0px 30px 0px;
 	border-style: solid;
+}
+
+#tennants_label{
+	height: 65px;
+	width: auto;
+	background-color: black;
+}
+
+#tennants_label h1{
+	margin-top: 0px;
+	padding-top: 12px;
+	color: #D8D8D8;
 }
 
 #tennant_edit{
@@ -249,7 +300,7 @@ header{
 	margin-left: 350px;
 	margin-top:75px;
 	box-shadow: 0 20px 6px -9px #333;
-	padding: 1px 5px 30px 0px;
+	padding: 3px 0px 30px 0px;
 	border-style: solid;
 }
 
@@ -265,7 +316,10 @@ header{
 	padding-top: 12px;
 	color: #D8D8D8;
 }
-	
+
+#form_edit{
+	font-size: 25px;
+}	
 
 #tennant_maintanence{
 	height: auto;
@@ -297,7 +351,7 @@ header{
 	margin-left: 350px;
 	margin-top:75px;
 	box-shadow: 0 20px 6px -9px #333;
-	padding: 1px 5px 30px 0px;
+	padding: 3px 0px 30px 0px;
 	border-style: solid;
 }
 
@@ -324,6 +378,18 @@ header{
 	border-style: solid;
 }
 
+#new_tennant_label{
+	height: 65px;
+	width: auto;
+	background-color: black;
+	color: #D8D8D8;
+}
+
+#new_tennant_label h1{
+	margin-top: 5px;
+	padding-top: 12px;
+}
+
 #edit_property{
 	height: auto;
 	width: 450px;
@@ -331,18 +397,30 @@ header{
 	margin-left: 450px;
 	margin-top:75px;
 	box-shadow: 0 20px 6px -9px #333;
-	padding: 1px 5px 30px 0px;
+	padding: 3px 0px 30px 0px;
 	border-style: solid;
+}
+
+#properties_edit{
+	height: 65px;
+	width: auto;
+	background-color: black;
+	color: #D8D8D8;
+}
+
+#properties_edit h1{
+	margin-top: 5px;
+	padding-top: 12px;
 }
 
 #landlord_login{
 	height: auto;
-	width: 550px;
+	width: 750px;
 	background: white;
-	margin-left: 450px;
+	margin-left: 350px;
 	margin-top:75px;
 	box-shadow: 0 20px 6px -9px #333;
-	padding: 1px 0px 30px 0px;
+	padding: 3px 0px 30px 0px;
 	border-style: solid;
 }
 
@@ -358,13 +436,74 @@ header{
 	padding-top: 12px;
 }
 
+#landlord_forgot_password{
+	height: auto;
+	width: 550px;
+	background: white;
+	margin-left: 450px;
+	margin-top:75px;
+	box-shadow: 0 20px 6px -9px #333;
+	padding: 1px 0px 30px 0px;
+	border-style: solid;
+}
 
+#password_label{
+	height: 65px;
+	width: auto;
+	background-color: black;
+	color: #D8D8D8;
+}
 
+#password_label h1{
+	margin-top: 5px;
+	padding-top: 12px;
+}
 
+#landlord_signup{
+	height: auto;
+	width: 750px;
+	background: white;
+	margin-left: 350px;
+	margin-top:75px;
+	box-shadow: 0 20px 6px -9px #333;
+	padding: 3px 0px 30px 0px;
+	border-style: solid;
+}
 
+#signup_label{
+	height: 65px;
+	width: auto;
+	background-color: black;
+	color: #D8D8D8;
+}
 
+#signup_label h1{
+	margin-top: 5px;
+	padding-top: 12px;
+}
 
+#landlord_edit{
+	height: auto;
+	width: 750px;
+	background: white;
+	margin-left: 350px;
+	margin-top:75px;
+	box-shadow: 0 20px 6px -9px #333;
+	padding: 3px 0px 30px 0px;
+	border-style: solid;
+}
 
+#edit_landlord_label{
+	height: 65px;
+	width: auto;
+	background-color: black;
+	color: #D8D8D8;
+}
+
+#edit_landlord_label h1{
+	margin-top:12px;
+	padding-top: 12px;
+}
 
 
 
