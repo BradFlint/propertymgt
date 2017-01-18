@@ -50,17 +50,16 @@ class PropertiesController < ApplicationController
 
 	def update
 	    @property = Property.find(params[:id])
-
-	      if @property.update(property_params)
-          redirect_to properties_path
-	      else
-		      render 'edit'
-		  end
+	       if @property.update_attributes(property_params)
+              redirect_to properties_path
+	       else
+		       render 'edit'
+		   end
 	end
 
     private
 	def property_params
-	    params.require(:property).permit(:property_id, :address, :city, :state, :zip, :monthly_rent, :date_available, :bedrooms, :baths, :square_feet, :description, :pet_policy, :security_deposit, :application_fee, :avatar)
+	    params.require(:property).permit(:property_id, :address, :city, :state, :zip, :monthly_rent, :date_available, :bedrooms, :bathrooms, :square_feet, :description, :pet_policy, :security_deposit, :application_fee, :avatar)
 	end
 end
 

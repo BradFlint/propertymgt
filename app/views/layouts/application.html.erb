@@ -14,11 +14,11 @@
 	  <div class="home_btns">
 	      
 	          <% if landlord_signed_in? %>
+		          <%= link_to "Homes For Rent", properties_path, :class => "btn" %> |
 		          <%= link_to "All Properties", properties_all_path, :class => "btn" %> |
 		          <%= link_to "Create New Property", new_property_path, :class => "btn" %> |
-		          <%= link_to "All Tennants", tennants_path, :class => "btn" %> |
-		          <%= link_to "Sign Out", destroy_landlord_session_path, method: :delete, :class => "btn" %> |
-		          <%= link_to "Edit Account", edit_landlord_registration_path, :class => "btn" %>
+		          <%= link_to "Tennants", tennants_path, :class => "btn" %> |
+		          <%= link_to "Sign Out", destroy_landlord_session_path, method: :delete, :class => "btn" %> 
 	          <% elsif session[:tennant_id] %>
 		          <%= link_to "Edit Account", edit_tennant_path(current_tennant), :class => "btn"  %> |
 		          <%= link_to "Homes For Rent", properties_path, :class => "btn" %> |
@@ -30,7 +30,6 @@
 		          <%= link_to "Homes for Rent", properties_path, :class => "btn" %> |
 		          <%= link_to "Apply", properties_apply_path, :class => "btn" %> |
 		          <%= link_to "Contact Us", landlords_contact_path, :class => "btn" %> |
-				  
 			      <%= link_to "Landlord Login", landlord_session_path, :class => "btn" %> |
 			      <%= link_to "Tennant Login", sessions_path, :class => "btn" %>
 			  
