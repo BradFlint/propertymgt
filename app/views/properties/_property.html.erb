@@ -1,0 +1,21 @@
+
+<div class="property <%= hidden_class if hidden_class %>">
+	<%= image_tag property.avatar.url(:medium) %><br>
+	<%= property.address%>
+	<%= property.city%>
+	<%= property.state%>
+	<%= property.zip%><br>
+	Monlthly Rent $<%= property.monthly_rent%><br>
+	Available Date <%= property.date_available%><br>
+	Bedrooms <%= property.bedrooms%><br>
+	Bathrooms <%= property.bathrooms%><br>
+	Sq feet <%= property.square_feet%><br>
+	Pet Policy <%= property.pet_policy%><br>
+	Security Deposit $<%= property.security_deposit%><br>
+	Application Fee $<%= property.application_fee%><br>
+	<%= property.description%><br>
+	<%= link_to "Apply", properties_apply_path, :class => "btn" %>
+</div>
+	
+
+

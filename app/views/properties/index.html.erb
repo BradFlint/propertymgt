@@ -7,33 +7,16 @@
 		<%= property.address%>
 		<%= property.city%>
 		<%= property.state%>
-		<%= property.zip%>
+		<%= property.zip%><br>
 		Rent $<%= property.monthly_rent%>
 		Beds <%= property.bedrooms%>
 		Baths <%= property.bathrooms%><br>
-		<%= property.description%>
 		<hr>
 	<%end%>
 </div>
 
 <div id="home_preview">
-	
-	<% @properties.each do |property| %>
-		<%= image_tag property.avatar.url(:medium) %><br>
-		<%= property.address%>
-		<%= property.city%>
-		<%= property.state%>
-		<%= property.zip%><br>
-		Monlthly Rent $<%= property.monthly_rent%><br>
-		Available Date <%= property.date_available%><br>
-		Bedrooms <%= property.bedrooms%><br>
-		Bathrooms <%= property.bathrooms%><br>
-		Sq feet <%= property.square_feet%><br>
-		Pet Policy <%= property.pet_policy%><br>
-		Security Deposit $<%= property.security_deposit%><br>
-		Application Fee $<%= property.application_fee%><br>
-		<%= property.description%><br>
-		<%= link_to "Apply", properties_apply_path, :class => "btn" %>
+	<% @properties.each_with_index do |property, i| %>
+		<%= render "property", property: property, hidden_class: (i != 0 ? 'hidden' : nil) %>
 	<%end%>
-	
 </div>

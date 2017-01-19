@@ -28,7 +28,7 @@ header{
  	background-color: #9E9C9C;
  	color: white;
     opacity: .95;
-    box-shadow: 0 15px 6px -9px #333;
+    box-shadow: 0 20px 6px -9px #333;
     margin-left: -2%;
     margin-top: -1%;
 }
@@ -37,7 +37,7 @@ header{
 	width: 225px;
 	margin-left: 5%;
 	position: relative;
-    top: -102px;
+    top: -98px;
 }
 
 .logo img{
@@ -68,6 +68,11 @@ header{
 	color: white;
 }
 
+#landlord_login{
+	font-size: 22px;
+	text-decoration: none;
+}
+
 .btn{
 	color: black;
 	text-decoration: none;
@@ -75,6 +80,16 @@ header{
 }
 
 .btn:hover{
+	color: #2daf54;
+}
+
+.property_btn{
+	font-size: 15px;
+	text-decoration: none;
+	color: black;
+}
+
+.property_btn:hover{
 	color: #2daf54;
 }
 
@@ -113,7 +128,7 @@ header{
 #application_form{
 	height: auto;
 	width: 700px;
-	background: white;
+	background: #D8D8D8;
 	margin-left: 350px;
 	margin-top: 75px;
 	box-shadow: 0 20px 6px -9px #333;
@@ -141,7 +156,7 @@ header{
 #tennant_login_form{
 	height: auto;
 	width: 750px;
-	background: white;
+	background: #D8D8D8;
 	margin-left: 350px;
 	margin-top:75px;
 	box-shadow: 0 20px 6px -9px #333;
@@ -161,10 +176,18 @@ header{
 	padding-top: 12px;
 }
 
+#tennant_sign{
+	font-size: 22px;
+}
+
+input{ 
+	font-size: 16px; 
+}
+
 .contact_info{
 	height: auto;
 	width: 700px;
-	background: white;
+	background: #D8D8D8;
 	margin-left: 350px;
 	margin-top: 75px;
 	box-shadow: 0 20px 6px -9px #333;
@@ -174,6 +197,10 @@ header{
 
 .contact_info h1{
 	font-size: 30px;
+}
+
+.contact_info p{
+	font-size: 19px;
 }
 
 #contact{
@@ -189,11 +216,11 @@ header{
 }
 
 #homes_for_rent{
-	height: 500px;
-	width: 400px;
-	background: white;
-	margin-left: 40px;
-	margin-top:75px;
+	height: 575px;
+	width: 450px;
+	background: #D8D8D8;
+	margin-left: 20px;
+	margin-top:32px;
 	box-shadow: 0 20px 6px -9px #333;
 	padding: 7px 0px 30px 0px;
 	border-style: solid;
@@ -213,26 +240,31 @@ header{
 }
 
 #home_preview{
-	height: 600px;
+	height: 575px;
 	width: 900px;
-	background: white;
-	margin-left: 480px;
-	margin-top:-595px;
+	background: #D8D8D8;
+	margin-left: 500px;
+	margin-top:-618px;
 	box-shadow: 0 20px 6px -9px #333;
 	padding: 7px 0px 30px 0px;
 	border-style: solid;
 }
 
+.property.hidden{
+	display: none;
+}
+
 #all_properties{
 	height: 470px;
-	width: 700px;
-	background: white;
-	margin-left: 350px;
+	width: 750px;
+	background: #D8D8D8;
+	margin-left: 340px;
 	margin-top: 75px;
 	box-shadow: 0 20px 6px -9px #333;
 	padding: 7px 0px 30px 0px;
 	border-style: solid;
 	overflow: scroll;
+	font-size: 19px;
 }
 
 #properties_label{
@@ -249,13 +281,14 @@ header{
 
 #create_new_property{
 	height: auto;
-	width: 450px;
-	background: white;
-	margin-left: 450px;
+	width: 750px;
+	background: #D8D8D8;
+	margin-left: 350px;
 	margin-top:75px;
 	box-shadow: 0 20px 6px -9px #333;
 	padding: 7px 0px 30px 0px;
 	border-style: solid;
+	font-size: 19px;
 }
 
 #properties_new{
@@ -273,13 +306,25 @@ header{
 #all_tennants{
 	height: auto;
 	width: 750px;
-	background: white;
+	background: #D8D8D8;
 	margin-left: 350px;
 	margin-top:75px;
 	box-shadow: 0 20px 6px -9px #333;
 	padding: 7px 0px 30px 0px;
 	border-style: solid;
+	font-size: 22px;
 }
+
+.delete_tennant_btn{
+	font-size: 15px;
+	text-decoration: none;
+	color: black;
+}
+
+.delete_tennant_btn:hover{
+	color: #2daf54;
+}
+
 
 #tennants_label{
 	height: 65px;
@@ -296,7 +341,7 @@ header{
 #tennant_edit{
 	height: auto;
 	width: 750px;
-	background: white;
+	background: #D8D8D8;
 	margin-left: 350px;
 	margin-top:75px;
 	box-shadow: 0 20px 6px -9px #333;
@@ -324,7 +369,7 @@ header{
 #tennant_maintanence{
 	height: auto;
 	width: 750px;
-	background: white;
+	background: #D8D8D8;
 	margin-left: 350px;
 	margin-top:75px;
 	box-shadow: 0 20px 6px -9px #333;
@@ -347,7 +392,7 @@ header{
 #tennant_pay{
 	height: auto;
 	width: 750px;
-	background: white;
+	background: #D8D8D8;
 	margin-left: 350px;
 	margin-top:75px;
 	box-shadow: 0 20px 6px -9px #333;
@@ -370,7 +415,7 @@ header{
 #create_new_tennant{
 	height: auto;
 	width: 750px;
-	background: white;
+	background: #D8D8D8;
 	margin-left: 350px;
 	margin-top:75px;
 	box-shadow: 0 20px 6px -9px #333;
@@ -393,7 +438,7 @@ header{
 #edit_property{
 	height: auto;
 	width: 450px;
-	background: white;
+	background: #D8D8D8;
 	margin-left: 450px;
 	margin-top:75px;
 	box-shadow: 0 20px 6px -9px #333;
@@ -416,7 +461,7 @@ header{
 #landlord_login{
 	height: auto;
 	width: 750px;
-	background: white;
+	background: #D8D8D8;
 	margin-left: 350px;
 	margin-top:75px;
 	box-shadow: 0 20px 6px -9px #333;
@@ -439,7 +484,7 @@ header{
 #landlord_forgot_password{
 	height: auto;
 	width: 550px;
-	background: white;
+	background: #D8D8D8;
 	margin-left: 450px;
 	margin-top:75px;
 	box-shadow: 0 20px 6px -9px #333;
@@ -462,7 +507,7 @@ header{
 #landlord_signup{
 	height: auto;
 	width: 750px;
-	background: white;
+	background: #D8D8D8;
 	margin-left: 350px;
 	margin-top:75px;
 	box-shadow: 0 20px 6px -9px #333;
@@ -485,7 +530,7 @@ header{
 #landlord_edit{
 	height: auto;
 	width: 750px;
-	background: white;
+	background: #D8D8D8;
 	margin-left: 350px;
 	margin-top:75px;
 	box-shadow: 0 20px 6px -9px #333;
