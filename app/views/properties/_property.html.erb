@@ -1,6 +1,10 @@
 
-<div class="property <%= hidden_class if hidden_class %>">
-	<%= image_tag property.avatar.url(:medium) %><br>
+<div class="property <%= hidden_class if hidden_class %>" data-id="<%= property.id%>">
+	
+	<% property.images.each do |image| %>
+		<%= image.picture.url(:medium) %>
+	<% end %>
+	
 	<%= property.address%>
 	<%= property.city%>
 	<%= property.state%>

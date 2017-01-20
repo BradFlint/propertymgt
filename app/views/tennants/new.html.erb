@@ -3,24 +3,27 @@
 		<h1>CREATE NEW TENNANT ACCOUNT</h1>
 	</div>
 	<!-- form to create a new user account -->
-	<div id="createacctform">
+	<div id="create_account_form">
 		<%= form_for @tennant do |f| %>
-			<%= f.label :first_name, "First Name"%>
-			<%= f.text_field :first_name%>
-			<br>
-			<%= f.label :last_name, "Last Name"%>
-			<%= f.text_field :last_name %>
-			<br>
-			<%= f.label :email, "Email"%>
-			<%= f.text_field :email %>
-			<br>
-			<%= f.label :password, "Password"%>
-			<%= f.password_field :password %>
-			<br>
+			<div class="field">
+				<%= f.label :first_name, "First Name"%>
+				<%= f.text_field :first_name%>
+			</div>
+			<div class="field">
+				<%= f.label :last_name, "Last Name"%>
+				<%= f.text_field :last_name %>
+			</div>
+			<div class="field">
+				<%= f.label :email, "Email"%>
+				<%= f.text_field :email %>
+			</div>
+			<div class="field">
+				<%= f.label :password, "Password"%>
+				<%= f.password_field :password %>
+				</div>
 			<%= f.hidden_field :property_id, value:@property_id %>
 			<br>
-			<br>
-			<%= f.submit%>
+			<%= f.submit %>
 		<% end %>
 	</div>
 	<!-- if there are errors when creating account the errors are displayed -->

@@ -1,18 +1,4 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+
 @import url("https://fonts.googleapis.com/css?family=Raleway");
 
 body{
@@ -138,6 +124,7 @@ header{
 
 #apply_text, #applytext input {
 	margin-left: 20px;
+	margin-right: 20px;
 }
 
 #apply{
@@ -227,6 +214,10 @@ input{
 	overflow: scroll;
 }
 
+.home:hover{
+	background: #c0d6f9;
+}
+
 #rent{
 	height: 65px;
 	width: auto;
@@ -258,7 +249,7 @@ input{
 	height: 470px;
 	width: 750px;
 	background: #D8D8D8;
-	margin-left: 340px;
+	margin-left: 350px;
 	margin-top: 75px;
 	box-shadow: 0 20px 6px -9px #333;
 	padding: 7px 0px 30px 0px;
@@ -281,7 +272,7 @@ input{
 
 #create_new_property{
 	height: auto;
-	width: 750px;
+	width: 650px;
 	background: #D8D8D8;
 	margin-left: 350px;
 	margin-top:75px;
@@ -295,6 +286,7 @@ input{
 	height: 65px;
 	width: auto;
 	background-color: black;
+
 }
 
 #properties_new h1{
@@ -318,11 +310,11 @@ input{
 .delete_tennant_btn{
 	font-size: 15px;
 	text-decoration: none;
-	color: black;
+	color: #2daf54;
 }
 
 .delete_tennant_btn:hover{
-	color: #2daf54;
+	color: black;
 }
 
 
@@ -365,6 +357,11 @@ input{
 #form_edit{
 	font-size: 25px;
 }	
+
+#create_account_form{
+	margin-top: 20px;
+	font-size: 20px;
+}
 
 #tennant_maintanence{
 	height: auto;
@@ -414,7 +411,7 @@ input{
 
 #create_new_tennant{
 	height: auto;
-	width: 750px;
+	width: 650px;
 	background: #D8D8D8;
 	margin-left: 350px;
 	margin-top:75px;
@@ -437,9 +434,9 @@ input{
 
 #edit_property{
 	height: auto;
-	width: 450px;
+	width: 650px;
 	background: #D8D8D8;
-	margin-left: 450px;
+	margin-left: 350px;
 	margin-top:75px;
 	box-shadow: 0 20px 6px -9px #333;
 	padding: 3px 0px 30px 0px;
@@ -550,9 +547,35 @@ input{
 	padding-top: 12px;
 }
 
+.field{
+   text-align: right;
+   margin-right:200px;
+   margin-top: 5px;
 
+}
 
+#landlord_change_password{
+	height: auto;
+	width: 750px;
+	background: #D8D8D8;
+	margin-left: 350px;
+	margin-top:75px;
+	box-shadow: 0 20px 6px -9px #333;
+	padding: 3px 0px 30px 0px;
+	border-style: solid;
+}
 
+#password_form{
+	height: auto;
+	width: 750px;
+	background: red;
+	margin-left: 350px;
+	margin-top:75px;
+	box-shadow: 0 20px 6px -9px #333;
+	padding: 3px 0px 30px 0px;
+	border-style: solid;
+
+}
 
 
 

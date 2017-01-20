@@ -2,21 +2,32 @@
 	<div align=center id="rent">
 		<h1>HOMES FOR RENT</h1>
 	</div>
-	<% @properties.each do |property| %>
-		<%= image_tag property.avatar.url(:thumb) %>
-		<%= property.address%>
-		<%= property.city%>
-		<%= property.state%>
-		<%= property.zip%><br>
-		Rent $<%= property.monthly_rent%>
-		Beds <%= property.bedrooms%>
-		Baths <%= property.bathrooms%><br>
-		<hr>
-	<%end%>
+		<div id="homes">
+			<% @properties.each do |property| %>
+				<div class="home" data-id="<%= property.id%>">
+					<%= image_tag property.avatar.url(:thumb) %>
+					<%= property.address%>
+					<%= property.city%>
+					<%= property.state%>
+					<%= property.zip%><br>
+					Rent $<%= property.monthly_rent%>
+					Beds <%= property.bedrooms%>
+					Baths <%= property.bathrooms%><br>
+					<hr>
+				</div>
+			<%end%>
+		</div>
 </div>
 
 <div id="home_preview">
 	<% @properties.each_with_index do |property, i| %>
 		<%= render "property", property: property, hidden_class: (i != 0 ? 'hidden' : nil) %>
 	<%end%>
+
+	<p id="demo"></p>
+
+	<script>
+	
+	</script>
 </div>
+

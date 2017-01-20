@@ -27,12 +27,15 @@ class PropertiesController < ApplicationController
   	end
 
 	def create
-    @property = Property.new(property_params)
-    if @property.save
-        redirect_to properties_all_path
-    else
-      render "new"
-    end
+	    @property = Property.new(property_params)
+	    if @property.save
+	    	params[:images].each do |image|
+	    		@property.images.create(picture: image)
+	    	end
+	        redirect_to properties_all_path
+	    else
+	      render "new"
+	    end
    end
 
    def apply

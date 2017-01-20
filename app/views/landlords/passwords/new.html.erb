@@ -2,19 +2,15 @@
     <div align=center id="password_label">
       <h1>FORGOT YOUR PASSWORD?</h1>
     </div>
-
+    <h1>heloo</h1>
+	<div id= "password_form">
 	<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
 	  <%= devise_error_messages! %>
-
-	  <div class="field">
 	    <%= f.label :email %><br />
 	    <%= f.email_field :email, autofocus: true %>
-	  </div>
-
-	  <div class="actions">
 	    <%= f.submit "Send me reset password instructions" %>
-	  </div>
 	<% end %>
-
+	</div>
 	<%= render "landlords/shared/links" %>
 </div>
+

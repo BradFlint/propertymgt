@@ -1,10 +1,10 @@
 <div align= center id="all_properties">
 	<div align=center id="properties_label">
 		<h1>ALL PROPERTIES</h1>
-		<hr>
 	</div>
+	<br>
 	<% @properties.each do |property| %>
-		<%= image_tag property.avatar.url(:thumb) %>
+		<%= image_tag property.avatar.url(:thumb) %><br>
 		<%= property.address%>
 		<%= property.city%>
 		<%= property.state%>
@@ -23,4 +23,5 @@
 		<hr>
 		<br>
 	<%end%>
+	
 </div>
