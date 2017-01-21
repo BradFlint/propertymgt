@@ -59,6 +59,16 @@ header{
 	text-decoration: none;
 }
 
+.landlord_btn{
+	color: black;
+	text-decoration: none;
+}
+
+.landlord_btn:hover{
+	color: #2daf54;
+	text-decoration: none;
+}
+
 .btn{
 	color: black;
 	text-decoration: none;
@@ -140,6 +150,10 @@ header{
 	margin-left: 250px;
 }
 
+#apply_form{
+	margin-left: 90px;
+}
+
 #tennant_login_form{
 	height: auto;
 	width: 750px;
@@ -204,9 +218,9 @@ input{
 
 #homes_for_rent{
 	height: 575px;
-	width: 450px;
+	width: 400px;
 	background: #D8D8D8;
-	margin-left: 20px;
+	margin-left: 50px;
 	margin-top:32px;
 	box-shadow: 0 20px 6px -9px #333;
 	padding: 7px 0px 30px 0px;
@@ -234,7 +248,7 @@ input{
 	height: 575px;
 	width: 900px;
 	background: #D8D8D8;
-	margin-left: 500px;
+	margin-left: 480px;
 	margin-top:-618px;
 	box-shadow: 0 20px 6px -9px #333;
 	padding: 7px 0px 30px 0px;
@@ -372,6 +386,10 @@ input{
 	box-shadow: 0 20px 6px -9px #333;
 	padding: 2px 0px 30px 0px;
 	border-style: solid;
+}
+
+#maintanence_form{
+	margin-right: 70px;
 }
 
 #maint_form{
@@ -522,6 +540,13 @@ input{
 #signup_label h1{
 	margin-top: 5px;
 	padding-top: 12px;
+}
+
+.landlord_field{
+	font-size: 20px;
+	text-align: right;
+   	margin-right:200px;
+   	margin-top: 5px;
 }
 
 #landlord_edit{

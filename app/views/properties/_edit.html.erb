@@ -2,6 +2,7 @@
 	<div align=center id="properties_edit">
 		<h1>EDIT PROPERTY</h1>
 	</div>
+	<hr>
 
 	<%= form_for @property, :html => {:multipart => true} do |f| %>
 
@@ -19,7 +20,7 @@
 	     <%= f.label :state, "State" %>
 	     <%= f.text_field :state %>
 	   </div>
-	   
+
 	   <div class="field">
 	     <%= f.label :zip, "Zip Code" %>
 	     <%= f.text_field :zip %>

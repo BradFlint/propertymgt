@@ -1,11 +1,13 @@
-<div id="homes_for_rent">
+<div align = center id="homes_for_rent">
 	<div align=center id="rent">
 		<h1>HOMES FOR RENT</h1>
 	</div>
+	<hr>
+	<br>
 		<div id="homes">
 			<% @properties.each do |property| %>
 				<div class="home" data-id="<%= property.id%>">
-					<%= image_tag property.avatar.url(:thumb) %>
+					<%= image_tag property.avatar.url(:thumb) %><br>
 					<%= property.address%>
 					<%= property.city%>
 					<%= property.state%>
@@ -13,10 +15,12 @@
 					Rent $<%= property.monthly_rent%>
 					Beds <%= property.bedrooms%>
 					Baths <%= property.bathrooms%><br>
-					<hr>
+					<br>
 				</div>
+				<hr>
 			<%end%>
 		</div>
+
 </div>
 
 <div id="home_preview">

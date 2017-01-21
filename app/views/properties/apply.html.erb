@@ -3,6 +3,7 @@
     <div id="apply">
       <h1>APPLICATION</h1>
     </div>
+    <hr>
       <div id="apply_text">
         <p>Please be prepared to pay the application fee as outlined in the property listing. In addition to this rental application, you will also be required to provide a copy of a valid form of identification and proof of income.<br><br>
 
@@ -16,7 +17,7 @@
       </div>
     	<%= form_tag '/properties/apply' do %>
 
-      <div class="field">
+      <div id="apply_form">
         <%= label_tag :name, "Name" %>
         <%= text_field_tag :name %>
         <%= label_tag :email, "Email" %>

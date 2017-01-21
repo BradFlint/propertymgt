@@ -2,7 +2,8 @@ Rails.application.routes.draw do
 
   devise_for :landlords, controllers: {
         sessions: 'landlords/sessions', 
-        registrations: 'landlords/registrations'
+        registrations: 'landlords/registrations',
+        passwords: 'landlords/passwords'
       }
   
 

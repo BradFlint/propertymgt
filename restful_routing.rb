@@ -2,11 +2,11 @@
         new_landlord_session GET    /landlords/sign_in(.:format)         landlords/sessions#new
             landlord_session POST   /landlords/sign_in(.:format)         landlords/sessions#create
     destroy_landlord_session DELETE /landlords/sign_out(.:format)        landlords/sessions#destroy
-       new_landlord_password GET    /landlords/password/new(.:format)    devise/passwords#new
-      edit_landlord_password GET    /landlords/password/edit(.:format)   devise/passwords#edit
-           landlord_password PATCH  /landlords/password(.:format)        devise/passwords#update
-                             PUT    /landlords/password(.:format)        devise/passwords#update
-                             POST   /landlords/password(.:format)        devise/passwords#create
+       new_landlord_password GET    /landlords/password/new(.:format)    landlords/passwords#new
+      edit_landlord_password GET    /landlords/password/edit(.:format)   landlords/passwords#edit
+           landlord_password PATCH  /landlords/password(.:format)        landlords/passwords#update
+                             PUT    /landlords/password(.:format)        landlords/passwords#update
+                             POST   /landlords/password(.:format)        landlords/passwords#create
 cancel_landlord_registration GET    /landlords/cancel(.:format)          landlords/registrations#cancel
    new_landlord_registration GET    /landlords/sign_up(.:format)         landlords/registrations#new
   edit_landlord_registration GET    /landlords/edit(.:format)            landlords/registrations#edit
