@@ -7,7 +7,7 @@
 		<% @tennants.each do |tennant| %>
 			<%= tennant.first_name%>
 			<%= tennant.last_name%>
-			email:<%= tennant.email%>
+			email: <%= tennant.email%>
 			password: <%= tennant.password%>
 			<%= link_to "Delete Tennant", tennant_path(tennant), method: :delete, :class => "delete_tennant_btn"  %>
 			<br>

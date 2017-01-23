@@ -29,14 +29,11 @@ class PropertiesController < ApplicationController
 	def create
 	    @property = Property.new(property_params)
 	    if @property.save
-	    	params[:images].each do |image|
-	    		@property.images.create(picture: image)
-	    	end
-	        redirect_to properties_all_path
+	        redirect_to properties_all_path 
 	    else
 	      render "new"
 	    end
-   end
+	end
 
    def apply
    	Pony.mail(from: params[:email], to: "bradwflint@gmail.com", subject: "Email application", body: "application test", :attachments => {"rentalapp.pdf" => File.read(Rails.root.to_s + "/public/rentalapp.pdf")} )

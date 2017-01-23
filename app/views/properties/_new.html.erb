@@ -71,10 +71,10 @@
 	     <%= f.date_field :date_available %>
 	   </div>
 
-	 	<%= file_field_tag "images[]", type: :file, multiple: true %>
+	 	<%= f.file_field :avatar, type: :file %>
 	 
 	   <div class="actions">
-	    <%= f.submit nil, :class => 'btn btn-primary' %>
+	    <%= f.submit nil, :class => 'btn_box' %>
 	  </div>
 
 	<% end %>

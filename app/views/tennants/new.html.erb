@@ -24,7 +24,9 @@
 				</div>
 			<%= f.hidden_field :property_id, value:@property_id %>
 			<br>
-			<%= f.submit %>
+			<div id="create_tennant_btn">
+				<%= f.submit "Create Tennant", :class => "btn_box" %>
+			</div>
 		<% end %>
 	</div>
 	<!-- if there are errors when creating account the errors are displayed -->

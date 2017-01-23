@@ -9,7 +9,7 @@
 				<div class="home" data-id="<%= property.id%>">
 					<%= image_tag property.avatar.url(:thumb) %><br>
 					<%= property.address%>
-					<%= property.city%>
+					<%= property.city%>,
 					<%= property.state%>
 					<%= property.zip%><br>
 					Rent $<%= property.monthly_rent%>
@@ -28,10 +28,5 @@
 		<%= render "property", property: property, hidden_class: (i != 0 ? 'hidden' : nil) %>
 	<%end%>
 
-	<p id="demo"></p>
-
-	<script>
-	
-	</script>
 </div>
 

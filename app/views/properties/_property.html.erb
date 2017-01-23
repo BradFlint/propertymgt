@@ -1,24 +1,28 @@
 
 <div class="property <%= hidden_class if hidden_class %>" data-id="<%= property.id%>">
-	
-	<% property.images.each do |image| %>
-		<%= image.picture.url(:medium) %>
-	<% end %>
-	
-	<%= property.address%>
-	<%= property.city%>
-	<%= property.state%>
-	<%= property.zip%><br>
-	Monlthly Rent $<%= property.monthly_rent%><br>
-	Available Date <%= property.date_available%><br>
-	Bedrooms <%= property.bedrooms%><br>
-	Bathrooms <%= property.bathrooms%><br>
-	Sq feet <%= property.square_feet%><br>
-	Pet Policy <%= property.pet_policy%><br>
-	Security Deposit $<%= property.security_deposit%><br>
-	Application Fee $<%= property.application_fee%><br>
-	<%= property.description%><br>
-	<%= link_to "Apply", properties_apply_path, :class => "btn" %>
+		<div class="property_image">
+			<%= image_tag property.avatar.url %><br>
+		</div>
+		<br>
+		<div align =center id="property_address1">
+			<%= property.address%>
+			<%= property.city%>,
+			<%= property.state%>
+			<%= property.zip%><br>
+		</div>
+		Bedrooms: <%= property.bedrooms%><br>
+		Bathrooms: <%= property.bathrooms%><br>
+		
+		
+		
+		Sq feet: <%= property.square_feet%><br>
+		Pet Policy: <%= property.pet_policy%><br>
+		Monlthly Rent: $<%= property.monthly_rent%><br>
+		Security Deposit: $<%= property.security_deposit%><br>
+		Application Fee: $<%= property.application_fee%><br>
+		Available Date: <%= property.date_available%><br>
+		<%= property.description%><br>
+		<%= link_to "Apply", properties_apply_path, :class => "apply_btn" %>
 </div>
 	
 

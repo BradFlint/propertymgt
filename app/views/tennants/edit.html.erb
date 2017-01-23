@@ -5,22 +5,31 @@
 	<hr>
 		<h2>Need to edit your account information?</h2>
 	<!-- displays current users information and give the user the ability to change the info -->
-		<div id="form_edit"
+		<div id="form_edit">
 			<%= form_for @tennant, html: {method: :put} do |f| %>
-				<%= f.label :first_name, "First Name" %>
-				<%= f.text_field :first_name %>
-				<br>
-				<%= f.label :last_name, "Last Name" %>
-				<%= f.text_field :last_name %>
-				<br>
-				<%= f.label :email, "Email" %>
-				<%= f.text_field :email %>
-				<br>
-				<%= f.label :password, "Password" %>
-				<%= f.text_field :password %>
-				<br>
-				<br>
-				<%= f.submit %>
+				<div class="field">
+					<%= f.label :first_name, "First Name" %>
+					<%= f.text_field :first_name %>
+				</div>
+			
+				<div class="field">
+					<%= f.label :last_name, "Last Name" %>
+					<%= f.text_field :last_name %>
+				</div>
+			
+				<div class="field">
+					<%= f.label :email, "Email" %>
+					<%= f.text_field :email %>
+				</div>
+				
+				<div class="field">
+					<%= f.label :password, "Password" %>
+					<%= f.text_field :password %>
+				<div/>
+			
+				<div id="edit_act_btn">
+					<%= f.submit(:class => "btn_box") %>
+				</div>
 			<% end %>
 		</div>
 </div>
