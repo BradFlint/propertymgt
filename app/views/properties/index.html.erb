@@ -27,6 +27,5 @@
 	<% @properties.each_with_index do |property, i| %>
 		<%= render "property", property: property, hidden_class: (i != 0 ? 'hidden' : nil) %>
 	<%end%>
-
 </div>
 

@@ -4,25 +4,19 @@
   </div>
   <hr>
 
-  <h3>Enter your name and the description of the problem.</h3>
-  <h3>An email will be automatically sent to the landlord.</h3> 
+  <h2><%= @tennant.first_name %>, describe the nature of the problem.</h2>
+  <h2>An email will be automatically sent to the landlord.</h2> 
 
   <div id="maintanence_form">
   	<%= form_tag '/tennants/maintanence' do %>
-
-    <div class="field">
-      <%= label_tag :name, "Name" %>
-      <%= text_field_tag :name %>
-    </div>
     
     <div class="field">
-      <%= label_tag :message, "Message" %>
-      <%= text_field_tag :message %>
+      <%= text_area_tag :message, nil, id: "message_box"  %>
     </div>
     <br>
     
     <div class="actions">
-      <%= submit_tag "Send", :class => "btn_box" %>
+      <%= submit_tag "Send", :class => "maint_btn_box" %>
     </div>
 
     <% end %>

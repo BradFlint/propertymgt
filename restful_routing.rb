@@ -15,14 +15,14 @@ cancel_landlord_registration GET    /landlords/cancel(.:format)          landlor
                              DELETE /landlords(.:format)                 landlords/registrations#destroy
                              POST   /landlords(.:format)                 landlords/registrations#create
             properties_apply GET    /properties/apply(.:format)          properties#apply
+                             POST   /properties/apply(.:format)          properties#application_request
            landlords_contact GET    /landlords/contact(.:format)         landlords#contact
              sessions_create POST   /tennants/sign_in(.:format)          sessions#create
                     sessions GET    /sessions/sign_in(.:format)          sessions#new
                     sign_out DELETE /sessions/sign_out(.:format)         sessions#destroy
         tennants_maintanence GET    /tennants/maintanence(.:format)      tennants#maintanence
+                             POST   /tennants/maintanence(.:format)      tennants#maintanence_request
                 tennants_pay GET    /tennants/:id/pay(.:format)          tennants#pay
-                             POST   /properties/apply(.:format)          properties#apply
-                             POST   /tennants/maintanence(.:format)      tennants#maintanence
               properties_all GET    /properties/all(.:format)            properties#all
        properties_liststatus GET    /properties/:id/liststatus(.:format) properties#liststatus
                     tennants GET    /tennants(.:format)                  tennants#index

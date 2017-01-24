@@ -135,7 +135,7 @@ header{
 
 #application_form{
 	height: auto;
-	width: 700px;
+	width: 740px;
 	background: #D8D8D8;
 	margin-left: 350px;
 	margin-top: 75px;
@@ -163,7 +163,7 @@ header{
 }
 
 #apply_form{
-	margin-left: 90px;
+	margin-left: 120px;
 }
 
 #tennant_login_form{
@@ -288,7 +288,7 @@ input{
 	color: #2daf54;
 	text-decoration: none;
 	font-size: 20px;
-	margin-left: 400px;
+	margin-left: 380px;
 }
 
 .apply_btn:hover{
@@ -301,9 +301,9 @@ input{
 
 #all_properties{
 	height: 470px;
-	width: 750px;
+	width: 650px;
 	background: #D8D8D8;
-	margin-left: 350px;
+	margin-left: 370px;
 	margin-top: 75px;
 	box-shadow: 0 20px 6px -9px #333;
 	padding: 7px 0px 30px 0px;
@@ -326,9 +326,9 @@ input{
 
 #create_new_property{
 	height: auto;
-	width: 650px;
+	width: 600px;
 	background: #D8D8D8;
-	margin-left: 350px;
+	margin-left: 370px;
 	margin-top:75px;
 	box-shadow: 0 20px 6px -9px #333;
 	padding: 7px 0px 30px 0px;
@@ -353,7 +353,7 @@ input{
 	height: auto;
 	width: 760px;
 	background: #D8D8D8;
-	margin-left: 350px;
+	margin-left: 300px;
 	margin-top:75px;
 	box-shadow: 0 20px 6px -9px #333;
 	padding: 7px 0px 30px 0px;
@@ -416,7 +416,7 @@ input{
 }
 
 #form_edit{
-	font-size: 25px;
+	font-size: 20px;
 	margin-right: 40px;
 }	
 
@@ -450,6 +450,15 @@ input{
 #maint_form h1{
 	margin-top: 5px;
 	padding-top: 12px;
+}
+
+.maint_message{
+	height: 200px;
+	width: 400px;
+}
+
+.maint_btn_box{
+	margin-left: 65px;
 }
 
 #tennant_pay{
@@ -643,7 +652,12 @@ input{
 	border-style: solid;
 }
 
-
+textarea{
+	width: 400px;
+	height: 200px;
+	font-size: 20px;
+	margin-left: 180px;
+}
 
 
 

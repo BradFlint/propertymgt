@@ -29,16 +29,25 @@ class TennantsController < ApplicationController
 
   def destroy
   	Tennant.find(params[:id]).destroy
- 	redirect_to tennants_path
+ 	  redirect_to tennants_path
   end
 
   def maintanence
-  	Pony.mail(from: params[:email], to: "bradwflint@gmail.com", subject: "Maintanence request", body: "maintanence test" )
+    @tennant = Tennant.find(session[:tennant_id])
   end
 
+  def maintanence_request
+    @tennant = Tennant.find(session[:tennant_id])
+  	Pony.mail(from: @tennant.email, to: "bradwflint@gmail.com", subject: "Maintanence request", body: "#{@tennant.first_name} says:\n#{params[:message]}" )
+    redirect_to tennants_maintanence_path
+  end
 
   def pay
   	@tennant = Tennant.find(params[:id])
+  end
+
+  def show
+    @tennant = Tennant.find(session[:tennant_id])
   end
 
   private

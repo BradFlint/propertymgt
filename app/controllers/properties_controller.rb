@@ -23,7 +23,7 @@ class PropertiesController < ApplicationController
     end
 
 	def show
-
+		
   	end
 
 	def create
@@ -35,8 +35,14 @@ class PropertiesController < ApplicationController
 	    end
 	end
 
+	def application_request
+		Pony.mail(to: params[:email], from: "bradwflint@gmail.com", subject: "Email application", body: "Here is the rental application!", :attachments => {"rentalapp.pdf" => File.read(Rails.root.to_s + "/public/rentalapp.pdf")} )
+	    # Pony.mail(to: "bradwflint@gmail.com", from: "bradwflint@gmail.com", subject: "Email application", body: "Here is the rental application!", :attachments => {"rentalapp.pdf" => File.read(Rails.root.to_s + "/public/rentalapp.pdf")} )
+		redirect_to properties_apply_path
+	end
+
    def apply
-   	Pony.mail(from: params[:email], to: "bradwflint@gmail.com", subject: "Email application", body: "application test", :attachments => {"rentalapp.pdf" => File.read(Rails.root.to_s + "/public/rentalapp.pdf")} )
+		
    end
 
    def edit
