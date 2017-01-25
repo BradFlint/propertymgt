@@ -1,5 +1,6 @@
-
+<!-- the class is hidden if the home is not clicked on to be displayed on the page -->
 <div class="property <%= hidden_class if hidden_class %>" data-id="<%= property.id%>">
+	 <!-- displays the image and property information -->
 		<div class="property_image">
 			<%= image_tag property.avatar.url %><br>
 		</div>

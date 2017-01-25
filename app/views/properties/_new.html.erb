@@ -1,3 +1,4 @@
+<!-- displays header and "Create New Property" text inside the box-->
 <div align= center id="create_new_property">
 	<div align=center id="properties_new">
 		<h1>CREATE NEW PROPERTY</h1>
@@ -5,7 +6,7 @@
 	<hr>
 	<br>
 	<%= form_for @property, :url => properties_path, :html => { :multipart => true } do |f| %>
-
+<!-- form the landlord uses to create a new property -->
 	   <div class="field">
 	     <%= f.label :address, "Street Address" %>
 	     <%= f.text_field :address, autofocus: true %>
@@ -70,7 +71,7 @@
 	     <%= f.label :date_available, "Date Available" %>
 	     <%= f.date_field :date_available %>
 	   </div>
-
+<!-- allows the use of a photo -->
 	 	<%= f.file_field :avatar, type: :file %>
 	 
 	   <div class="actions">

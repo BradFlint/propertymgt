@@ -1,9 +1,11 @@
+<!-- displays the header and "All Properties" text inside the box -->
 <div align= center id="all_properties">
 	<div align=center id="properties_label">
 		<h1>ALL PROPERTIES</h1>
 	</div>
 	<hr>
 	<br>
+	<!-- loops through and displays all of the properties with image, info and links to Add Tennant, Delete Tennant, list or unlist property-->
 	<% @properties.each do |property| %>
 		<%= image_tag property.avatar.url(:thumb) %><br>
 		<%= property.address%>
@@ -17,6 +19,7 @@
 		<%= link_to "Edit Property", edit_property_path(property), :class => "property_btn" %> |
 		<%= link_to "Delete Property", property_path(property), method: :delete, :class => "property_btn"  %> |
 		<% if property.listed %>
+		<!-- if property is listed, the Unlist Property will display, if the property is not listed, the List Property button will display  -->
 		<%= link_to "Unlist Property", properties_liststatus_path(property), :class => "property_btn" %> 
 		<% else %>
 		<%= link_to "List Property", properties_liststatus_path(property), :class => "property_btn" %>

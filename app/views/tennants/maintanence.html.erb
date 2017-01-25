@@ -1,12 +1,13 @@
+<!-- displays the header and "Request Maintenance" text -->
 <div align= center id="tennant_maintanence">
   <div align="center" id="maint_form">
     <h1>REQUEST MAINTENANCE</h1>
   </div>
   <hr>
-
+  <!-- displays the signed in tennant's name  -->
   <h2><%= @tennant.first_name %>, describe the nature of the problem.</h2>
   <h2>An email will be automatically sent to the landlord.</h2> 
-
+  <!-- text box a tennant fills out requesting maintenance -->
   <div id="maintanence_form">
   	<%= form_tag '/tennants/maintanence' do %>
     
