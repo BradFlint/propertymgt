@@ -5,7 +5,7 @@ class CreateProperties < ActiveRecord::Migration[5.0]
       t.string :city
       t.string :state
       t.string :zip
-      t.string :monthly_rent
+      t.decimal :monthly_rent
       t.date :date_available
       t.integer :bedrooms
       t.integer :bathrooms

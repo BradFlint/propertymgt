@@ -23,7 +23,7 @@ class PropertiesController < ApplicationController
     end
 
 	def show
-		
+
   	end
 
 	def create
@@ -34,7 +34,7 @@ class PropertiesController < ApplicationController
 	      render "new"
 	    end
 	end
-
+	# pony gem used to send an email with a rental application to a protential potential tennant 
 	def application_request
 		Pony.mail(to: params[:email], from: "bradwflint@gmail.com", subject: "Email application", body: "Here is the rental application!", :attachments => {"rentalapp.pdf" => File.read(Rails.root.to_s + "/public/rentalapp.pdf")} )
 	    # Pony.mail(to: "bradwflint@gmail.com", from: "bradwflint@gmail.com", subject: "Email application", body: "Here is the rental application!", :attachments => {"rentalapp.pdf" => File.read(Rails.root.to_s + "/public/rentalapp.pdf")} )

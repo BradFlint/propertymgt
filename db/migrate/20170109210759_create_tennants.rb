@@ -5,6 +5,7 @@ class CreateTennants < ActiveRecord::Migration[5.0]
       t.string :last_name
       t.string :email
       t.string :password
+      t.references :property
 
       t.timestamps
     end

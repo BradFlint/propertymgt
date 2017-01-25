@@ -35,7 +35,7 @@ class TennantsController < ApplicationController
   def maintanence
     @tennant = Tennant.find(session[:tennant_id])
   end
-
+  # pony gem used for a tennant to send an email to the landlord to request maintanence
   def maintanence_request
     @tennant = Tennant.find(session[:tennant_id])
   	Pony.mail(from: @tennant.email, to: "bradwflint@gmail.com", subject: "Maintanence request", body: "#{@tennant.first_name} says:\n#{params[:message]}" )
