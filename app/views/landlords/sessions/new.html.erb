@@ -1,0 +1,18 @@
+<!-- displays header and "Landlord Login" text inside the box -->
+<div align= center id="landlord_login">
+    <div align=center id="landlord_label">
+      <h1>LANDLORD LOGIN</h1>
+    </div>
+    <hr>
+    <br>
+    <!-- form to login in the landlord -->
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <%= f.label :email %>
+        <%= f.email_field :email, autofocus: true %>
+        <%= f.label :password %>
+        <%= f.password_field :password, autocomplete: "off" %>
+        <%= f.submit "Log in", :class => "btn_box" %><br> 
+    <% end %>
+    <br>
+    <%= render "landlords/shared/links" %>
+</div>

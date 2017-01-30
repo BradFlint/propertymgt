@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  address: MyString
+  city: MyString
+  state: MyString
+  zip: MyString
+  monthly_rent: MyString
+  date_available: 2017-01-09
+  bedrooms: 1
+  bathrooms: 1
+  square_feet: 1
+  pet_policy: MyString
+  security_deposit: MyString
+  application_fee: MyString
+  description: MyString
+
+two:
+  address: MyString
+  city: MyString
+  state: MyString
+  zip: MyString
+  monthly_rent: MyString
+  date_available: 2017-01-09
+  bedrooms: 1
+  bathrooms: 1
+  square_feet: 1
+  pet_policy: MyString
+  security_deposit: MyString
+  application_fee: MyString
+  description: MyString

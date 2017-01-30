@@ -1,0 +1,84 @@
+<!-- displays the header and "Edit Property" inside the box  -->
+<div align= center id="edit_property">
+	<div align=center id="properties_edit">
+		<h1>EDIT PROPERTY</h1>
+	</div>
+	<hr>
+<!-- form the landlord uses to edit a property -->
+	<%= form_for @property, :html => {:multipart => true} do |f| %>
+
+	   <div class="field">
+	     <%= f.label :address, "Street Address" %>
+	     <%= f.text_field :address, autofocus: true %>
+	   </div>
+
+	   <div class="field">
+	     <%= f.label :city, "City" %>
+	     <%= f.text_field :city %>
+	   </div>
+
+	   <div class="field">
+	     <%= f.label :state, "State" %>
+	     <%= f.text_field :state %>
+	   </div>
+
+	   <div class="field">
+	     <%= f.label :zip, "Zip Code" %>
+	     <%= f.text_field :zip %>
+	   </div>
+
+	   <div class="field">
+	     <%= f.label :monthly_rent, "Monthly Rent" %>
+	     <%= f.text_field :monthly_rent %>
+	   </div>
+
+	   <div class="field">
+	     <%= f.label :bedrooms, "Bedrooms" %>
+	     <%= f.text_field :bedrooms %>
+	   </div>
+
+	   <div class="field">
+	     <%= f.label :bathrooms, "Bathrooms" %>
+	     <%= f.text_field :bathrooms %>
+	   </div>
+
+	   <div class="field">
+	     <%= f.label :square_feet, "Sq Feet" %>
+	     <%= f.text_field :square_feet %>
+	   </div>
+
+	   <div class="field">
+	     <%= f.label :description, "Desciption" %>
+	     <%= f.text_field :description  %>
+	   </div>
+
+	   <div class="field">
+	     <%= f.label :pet_policy, "Pet Policy" %>
+	     <%= f.text_field :pet_policy %>
+	   </div>
+
+	   <div class="field">
+	     <%= f.label :security_deposit, "Security Deposit" %>
+	     <%= f.text_field :security_deposit %>
+	   </div>
+
+	   <div class="field">
+	     <%= f.label :application_fee, "Application Fee" %>
+	     <%= f.text_field :application_fee %>
+	   </div>
+
+	    <div class="field">
+	     <%= f.label :date_available, "Date Available", class: "select" %>
+	     <%= f.date_select :date_available %>
+	   </div>
+
+	   <%= f.file_field :avatar %>
+	   
+	  <div class="actions">
+	    <%= f.submit(:class => "btn_box") %>
+	  </div>
+
+	 <% end %>
+</div>
+
+

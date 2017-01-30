@@ -1,0 +1,41 @@
+<!-- displays header and "Create New Tennant Account" text -->
+<div align= center id="create_new_tennant">
+	<div align=center id="new_tennant_label">
+		<h1>CREATE NEW TENNANT ACCOUNT</h1>
+	</div>
+	<hr>
+	<!-- form to create a new user account -->
+	<div id="create_account_form">
+		<%= form_for @tennant do |f| %>
+			<div class="field">
+				<%= f.label :first_name, "First Name"%>
+				<%= f.text_field :first_name%>
+			</div>
+			<div class="field">
+				<%= f.label :last_name, "Last Name"%>
+				<%= f.text_field :last_name %>
+			</div>
+			<div class="field">
+				<%= f.label :email, "Email"%>
+				<%= f.text_field :email %>
+			</div>
+			<div class="field">
+				<%= f.label :password, "Password"%>
+				<%= f.password_field :password %>
+				</div>
+			<%= f.hidden_field :property_id, value:@property_id %>
+			<br>
+			<div id="create_tennant_btn">
+				<%= f.submit "Create Tennant", :class => "btn_box" %>
+			</div>
+		<% end %>
+	</div>
+	<!-- if there are errors when creating account the errors are displayed -->
+	<% if @tennant.errors.full_messages.any? %>
+		<ul>
+			<% @tennant.errors.full_messages.each do |error_message| %>
+				<li><%= error_message %></li> <br />
+			<% end %>
+		</ul>
+	<% end %>
+</div>

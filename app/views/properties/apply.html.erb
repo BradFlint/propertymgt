@@ -1,0 +1,31 @@
+<!-- displays the box header and "Application" text -->
+<div id="application_form">
+  <div id="application_label">
+    <div id="apply">
+      <h1>APPLICATION</h1>
+    </div>
+    <hr>
+      <div id="apply_text">
+        <p>Please be prepared to pay the application fee as outlined in the property listing. In addition to this rental application, you will also be required to provide a copy of a valid form of identification and proof of income.<br><br>
+
+        To complete this rental application, you must be prepared to provide 3 years of residential history as well as contact information for your rental references. You will also be asked to provide information on your monthly income, and please note that most properties require that applicant combined gross income is at least three (3) times the monthly rent amount.<br>
+
+        Each resident over the age of 18 must submit a separate rental application.</p>
+
+        Applicant(s) understands that application fees are non-refundable . Security Deposits are Refundable within 48 hours of application, otherwise they are forfeitable. Applicant(s) that are not accepted will receive a Security Deposit refund.<br>
+        Application fee: $40.00
+        <h3>Enter your name and email address to have the application form emailed to you.</h3>
+      </div>
+      <!-- form potential tennants can fill out to have the application emailed them -->
+    	<%= form_tag properties_apply_path do %>
+      <div id="apply_form">
+        <%= label_tag :name, "Name" %>
+        <%= text_field_tag :name %>
+        <%= label_tag :email, "Email" %>
+        <%= text_field_tag :email %>
+        <%= submit_tag "Send", :class => "btn_box" %>
+      </div>
+
+      <% end %>
+    </div>
+</div>

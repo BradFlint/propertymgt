@@ -1,0 +1,16 @@
+<div align= center id="landlord_forgot_password">
+    <div align=center id="password_label">
+      <h1>FORGOT YOUR PASSWORD?</h1>
+    </div>
+	<hr>
+	<br>
+	<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+	  <%= devise_error_messages! %>
+	    <%= f.label :email %>
+	    <%= f.email_field :email, autofocus: true %><br><br>
+	    <%= f.submit "Send me reset password instructions" %><br>
+	    <br>
+	<% end %>
+	<%= render "landlords/shared/links" %>
+</div>
+
