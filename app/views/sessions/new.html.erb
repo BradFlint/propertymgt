@@ -1,17 +1,18 @@
-<h1>Sessions#new</h1>
-<p>Find me in app/views/sessions/new.html.erb</p>
-
-<div align=center id="logingreet">
-	<h1>Welcome Back! Sign in here</h1>
-</div>
 <!-- form for returning user to log in -->
-<div align= center id="loginform">
-	<%= form_tag(sessions_create_path, method: "post") do %>
-		<%= label_tag(:email, "Email Address")%>
-		<%= text_field_tag(:email)%>
-		<%= label_tag(:password, "Password")%>
-		<%= password_field_tag(:password) %>
-		<%= submit_tag("submit") %>
-	<% end %>
+<div align= center id="tennant_login_form">
+	<div align=center id="login_greet">
+		<h1>TENNANT LOGIN</h1>
+	</div>
+	<hr>
+	<br>
+	<div id="tennant_sign">
+		<%= form_tag(sessions_create_path, method: "post") do %>
+			<%= label_tag(:email, "Email Address")%>
+			<%= text_field_tag(:email)%>
+			<%= label_tag(:password, "Password")%>
+			<%= password_field_tag(:password) %>
+			<%= submit_tag("submit", :class => "btn_box") %>
+		<% end %>
+	</div>
 </div>
 

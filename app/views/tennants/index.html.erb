@@ -1,12 +1,19 @@
-
-<h1>All tennants</h1>
-<% @tennants.each do |tennant| %>
-	<%= tennant.first_name%>
-	<%= tennant.last_name%>
-	<%= tennant.email%>
-	<%= tennant.password%>
-	<%= link_to "Delete Tennant", tennant_path(tennant), method: :delete, :class => "btn"  %>
-	<br>
-	
-<%end%>
-
+<!-- displays box header and "All Current Tennants" text -->
+<div align= center id="all_tennants">
+	<div align=center id="tennants_label">
+		<h1>ALL CURRENT TENNANTS</h1>
+	</div>
+	<hr>
+	<!-- loops through all tennants and displays their name, email and password -->
+	<div id="tennants" >
+		<% @tennants.each do |tennant| %>
+			<%= tennant.first_name%>
+			<%= tennant.last_name%>
+			email: <%= tennant.email%>
+			password: <%= tennant.password%>
+	<!-- link to delete tennant -->
+			<%= link_to "Delete Tennant", tennant_path(tennant), method: :delete, :class => "delete_tennant_btn"  %>
+			<br>
+		<%end%>
+	</div>	
+</div>

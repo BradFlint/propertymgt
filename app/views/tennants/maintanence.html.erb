@@ -1,25 +1,26 @@
-<h1>tennants request maintanence</h1>
-
-<h3>Enter your name and description of the maintanence issue</h3>
-
-<div id="applicationForm">
-	<%= form_tag '/tennants/maintanence' do %>
-
-  <div class="field">
-    <%= label_tag :name, "Name" %><br />
-    <%= text_field_tag :name %>
+<!-- displays the header and "Request Maintenance" text -->
+<div align= center id="tennant_maintanence">
+  <div align="center" id="maint_form">
+    <h1>REQUEST MAINTENANCE</h1>
   </div>
-  
-  <div class="field">
-    <%= label_tag :message, "Message" %><br />
-    <%= text_field_tag :message %>
-  </div>
-  
-  <div class="actions">
-    <%= submit_tag "Send" %>
-  </div>
+  <hr>
+  <!-- displays the signed in tennant's name  -->
+  <h2><%= @tennant.first_name %>, describe the nature of the problem.</h2>
+  <h2>An email will be automatically sent to the landlord.</h2> 
+  <!-- text box a tennant fills out requesting maintenance -->
+  <div id="maintanence_form">
+  	<%= form_tag '/tennants/maintanence' do %>
+    
+    <div class="field">
+      <%= text_area_tag :message, nil, id: "message_box"  %>
+    </div>
+    <br>
+    
+    <div class="actions">
+      <%= submit_tag "Send", :class => "maint_btn_box" %>
+    </div>
 
-  <% end %>
+    <% end %>
+  </div>
 </div>
-
 

@@ -1,0 +1,27 @@
+<!-- the class is hidden if the home is not clicked on to be displayed on the page -->
+<div class="property <%= hidden_class if hidden_class %>" data-id="<%= property.id%>">
+	 <!-- displays the image and property information -->
+		<div class="property_image">
+			<%= image_tag property.avatar.url %><br>
+		</div>
+		<br>
+		<div align =center id="property_address1">
+			<%= property.address%>
+			<%= property.city%>,
+			<%= property.state%>
+			<%= property.zip%><br>
+		</div>
+		Bedrooms: <%= property.bedrooms%><br>
+		Bathrooms: <%= property.bathrooms%><br>
+		Sq feet: <%= property.square_feet%><br>
+		Pet Policy: <%= property.pet_policy%><br>
+		Monlthly Rent: $<%= property.monthly_rent%><br>
+		Security Deposit: $<%= property.security_deposit%><br>
+		Application Fee: $<%= property.application_fee%><br>
+		Available Date: <%= property.date_available.strftime("%m/%d/%y")%><br>
+		<%= property.description%><br>
+		<%= link_to "Click to Apply", properties_apply_path, :class => "apply_btn" %>
+</div>
+	
+
+
