@@ -11,6 +11,7 @@ class TennantsController < ApplicationController
   def create
   	@tennant = Tennant.new(tennant_params)
       if @tennant.save
+        session[:tennant_id] = @tennant.id 
         redirect_to root_path
       else
         render 'new'
