@@ -13,3 +13,5 @@ To set up the website:
 	`rails db:seed`
 3. Run
 	`rails s`
+
+To have homes displayed in the Homes For Rent, you need first log in as a landlord. Next go to All Properties page, select the home(s) to list and click the propertie's "List Property" link.
